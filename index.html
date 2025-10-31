@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>My Store</h1>
+
+      <div class="filter-section">
+        <input type="text" id="search" placeholder="Search for products..." />
+        <select id="category">
+          <option>All Categories</option>
+        </select>
+        <input type="text" id="minPrice" placeholder="Min Price" />
+        <input type="text" id="maxPrice" placeholder="Max Price" />
+        <button class="apply-btn">Apply Filters</button>
+      </div>
+
+      <div class="sort-section">
+        <select id="sort">
+          <option>Sort by Price</option>
+          <option value="asc">Low → High</option>
+          <option value="desc">High → Low</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart">
+      <h2>Shopping Cart</h2>
+    </div>
+
+    <!-- Product Container -->
+    <div class="container">
+      <div class="products-grid">
+        <!-- Products will be dynamically loaded here -->
+      </div>
+
+      <div class="pagination">
+        <button class="prev-next">Previous</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button class="prev-next">Next</button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

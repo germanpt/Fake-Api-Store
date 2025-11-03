@@ -146,6 +146,32 @@ h1 {
   color: var(--text);
 }
 
+.sort-section select:focus,
+.sort-section select:active {
+  /* keep your header-like background if desired */
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(17, 24, 39, 0.85)
+  );
+  /* ensure the visible select label text is readable */
+  color: var(--text);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+  outline: none;
+}
+
+/* Force option text to a dark color so items are readable in most browsers */
+.sort-section select option {
+  color: #0b1220; /* dark text */
+  background: #ffffff; /* light background for options */
+}
+
+/* MS Edge / IE fallback */
+.sort-section select::-ms-expand {
+  display: none;
+}
+
 /* Responsive compaction to prevent header taking excessive height */
 @media (max-width: 768px) {
   header {
@@ -167,9 +193,14 @@ h1 {
   }
   .sort-section {
     margin-top: 6px;
+    color: black;
   }
   .sort-section select {
     width: 160px;
+    color: black;
+  }
+  .sorter {
+    color: black;
   }
 }
 
